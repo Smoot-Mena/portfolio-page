@@ -39,7 +39,7 @@ html {
   z-index: 1000;
 }
 
-#navbar>ul {
+#navbar > ul {
   display: flex;
   place-items: center;
   padding-left: 0;
@@ -82,15 +82,15 @@ main {
   background-color: var(--aboutBackgroundColor);
 }
 
-#about>p {
+#about > p {
   padding: 2vh 0;
 }
 
-#about>p:first-of-type {
+#about > p:first-of-type {
   padding-top: 5vh;
 }
 
-#about>p:last-of-type {
+#about > p:last-of-type {
   padding-bottom: 5vh;
 }
 
@@ -99,7 +99,7 @@ main {
   background-color: var(--projectsTitleColor);
 }
 
-#projects>h1 {
+#projects > h1 {
   text-align: center;
 }
 
@@ -147,17 +147,17 @@ button {
   padding-top: 5vh;
 }
 
-#contact>h1 {
+#contact > h1 {
   text-align: center;
   color: var(--headerColor);
 }
 
-#contact>ul {
+#contact > ul {
   display: flex;
   padding-top: 5vh;
 }
 
-#contact>ul>li {
+#contact > ul > li {
   padding: 0 5vw;
 }
 
@@ -178,7 +178,7 @@ footer {
     height: 7vh;
   }
 
-  #navbar>ul {
+  #navbar > ul {
     font-size: large;
   }
 
@@ -196,11 +196,11 @@ footer {
     padding: 5vh 5vw 10vh;
   }
 
-  #about>p:first-of-type {
+  #about > p:first-of-type {
     padding-top: 6vh;
   }
 
-  #about>p:last-of-type {
+  #about > p:last-of-type {
     padding-bottom: 0;
   }
 
@@ -219,21 +219,21 @@ footer {
     padding-top: 5vh;
   }
 
-  #contact>h1 {
+  #contact > h1 {
     text-align: center;
     color: var(--headerColor);
   }
 
-  #contact>ul {
+  #contact > ul {
     display: flex;
     padding-top: 5vh;
   }
 
-  #contact>ul>li {
+  #contact > ul > li {
     padding: 0 7vw;
   }
 
-  #contact>ul>li:first-of-type {
+  #contact > ul > li:first-of-type {
     padding-left: 12vw;
   }
 
@@ -245,11 +245,11 @@ footer {
 
   #navbar {
     width: 100vw;
-    height: 12vh;
+    height: 10vh;
     justify-content: right;
   }
 
-  #navbar>ul {
+  #navbar > ul {
     margin-right: 5vw;
   }
 
@@ -259,7 +259,7 @@ footer {
 
   .navLink:hover {
     background-color: var(--aboutBackgroundColor);
-    padding: 4.75vh 1vw;
+    padding: 3.8vh 2vw;
     color: var(--textColor);
     transition: .5s;
   }
@@ -281,7 +281,7 @@ footer {
     place-items: center;
   }
 
-  #welcome-section>h1 {
+  #welcome-section > h1 {
     font-size: 4rem;
     text-align: center;
     padding-top: 15vh;
@@ -293,20 +293,76 @@ footer {
 
   #about {
     height: 100vh;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    display: grid;
+    grid-template-areas: 
+    "pic pic one"
+    "pic pic two"
+    "pic pic three"
+    "pic pic four"
+    "pic pic five";
   }
 
-  #about>p {
-    padding: 5vh 0;
+  #my-portrait {
+    grid-area: pic;
   }
 
-  #about>p:first-of-type {
+  #one {
+    grid-area: one;
+  }
+
+  #two {
+    grid-area: two;
+  }
+
+  #three {
+    grid-area: three;
+  }
+
+  #four {
+    grid-area: four;
+  }
+
+  #five {
+    grid-area: five;
+  }
+
+  figure {
+    margin-top: 10vh;
+  }
+
+  figcaption {
+    margin-left: 10vw;
+  }
+
+  #about > p {
+    width: 50vw;
+    padding: 2vh 0;
+    line-height: 2em;
+  }
+
+  #about > p:first-of-type {
     padding-top: 10vh;
   }
 
-  #about>p:last-of-type {
+  #about > p:last-of-type {
     padding-bottom: 5vh;
   }
+
+  #credentials {
+    height: 100vh;
+    font-size: 1.5em;
+    display: flex;
+  }
+
+  #credentials > p {
+    margin-top: 20vh;
+    line-height: 2em;
+    width: 50vw;
+    text-align: right;
+  }
+
+  
 
   #projects {
     width: 100vw;
@@ -317,7 +373,7 @@ footer {
     gap: 0;
   }
 
-  #projects>h1 {
+  #projects > h1 {
     font-size: 3rem;
     text-align: center;
     padding-bottom: 10vh;
@@ -364,11 +420,11 @@ footer {
     padding-top: 10vh;
   }
 
-  #contact>ul {
+  #contact > ul {
     justify-content: right;
   }
 
-  #contact>ul>li {
+  #contact > ul > li {
     padding: 0 2vw;
   }
 
@@ -376,7 +432,7 @@ footer {
     padding: 0;
   }
 
-  #contact>ul>li>a:hover {
+  #contact > ul > li > a:hover {
     padding: 1vh 2vw;
     background-color: var(--headerColor);
     color: var(--linksHoverColor);
@@ -388,7 +444,7 @@ footer {
     padding: 5vh 5vw;
   }
 
-  footer>a:hover {
+  footer > a:hover {
     color: var(--headerColor);
     transition: .5s;
   }
