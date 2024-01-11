@@ -362,7 +362,13 @@ footer {
     text-align: right;
   }
 
-  
+  #credentials > ul {
+    margin-top: 20vh;
+  }
+
+  figure > img {
+    width: 300px;
+  }
 
   #projects {
     width: 100vw;
