@@ -33,6 +33,7 @@ html {
 
 nav {
   display: flex;
+  width: 100vw;
   justify-content: center;
   height: 10vh;
   padding: 3vh 0;
@@ -53,7 +54,7 @@ nav {
 
 .nav-link {
   text-decoration: none;
-  margin: 0 5vw;
+  margin: 0 1vw;
   color: var(--linksColor);
   font-weight: bold;
 }
@@ -71,6 +72,8 @@ nav {
 
 #subHeader {
   font-size: medium;
+  color: var(--headerColor);
+  text-shadow: 1px 1px 1px var(--backgroundColor1);
 }
 
 #about {
@@ -211,7 +214,7 @@ figcaption {
 
 #contact > h1 {
   color: var(--headerColor);
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 2px 2px 2px var(--backgroundColor1);
   text-align: center;
   margin: 2vh 0;
 }
@@ -261,6 +264,7 @@ footer {
 
   #subHeader {
     font-size: 1em;
+    text-shadow: 1px 1px 1px white;
   }
 
   #about {
@@ -317,11 +321,23 @@ footer {
   
   #subHeader {
     font-size: .75em;
+    text-shadow: 2px 2px 2px white;
+  }
+
+  #my-portrait {
+    grid-area: my-portrait;
   }
   
   #about {
-    gap: 20px 0;
+    gap: 10px 40px;
     padding: 5vh 5vw;
+    display: grid;
+    grid-template-areas: 
+                                        "my-portrait one"
+                                        "my-portrait two"
+                                        "my-portrait three"
+                                        "my-portrait four"
+                                        "my-portrait five";
   }
 
   #about > #my-portrait > img {
@@ -332,8 +348,53 @@ footer {
     font-size: 1.5em;
   }
 
+  #logo-one {
+    grid-area: logo-one;
+  }
+
+  #logo-two {
+    grid-area: logo-two;
+  }
+
+  #logo-three {
+    grid-area: logo-three;
+  }
+
+  #logo-four {
+    grid-area: logo-four;
+  }
+
+  #logo-five {
+    grid-area: logo-five;
+  }
+
+  #logo-six {
+    grid-area: logo-six;
+  }
+
+  #logo-seven {
+    grid-area: logo-seven;
+  }
+
+  #logo-eight {
+    grid-area: logo-eight;
+  }
+
+  #logo-nine {
+    grid-area: logo-nine;
+  }
+
   .logo-figure > img {
-    width: 180px;
+    max-width: 180px;
+  }
+
+  #logo-container {
+    display: grid;
+    gap: 100px 1px;
+    grid-template-areas: 
+                              "logo-one logo-two logo-three"
+                              "logo-four logo-five logo-eight"
+                              "logo-six logo-seven logo-nine";
   }
 
   #express, 
@@ -341,6 +402,30 @@ footer {
   #mongo,
   .logo-figure > figcaption {
     max-width: 250px;
+  }
+
+  #project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-tile > a:hover,
+  #projects-button > a:hover {
+    opacity: .8;
+  }
+
+  .project-tile > a > figure > img {
+    max-width: 400px;
+    max-height: 190px;
+  }
+
+  #contact > ul {
+    justify-content: center;
+  }
+
+  .contact-link:hover, 
+  .footer-link:hover {
+    color: var(--linksHoverColor);
   }
 }
 
